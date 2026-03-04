@@ -1,0 +1,51 @@
+# =========================
+# Node (backend)
+# =========================
+node_modules/
+npm-debug.log*
+dist/
+build/
+coverage/
+# Keep package-lock.json for reproducible builds
+
+# =========================
+# Python (frontend with Uvicorn)
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+venv/
+env/
+ENV/
+*.sqlite3
+*.log
+
+# Uvicorn / ASGI logs
+*.pid
+*.seed
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+docker-data/
+*.pid
+
+# =========================
+# OS & editor files
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# Misc
+# =========================
+tmp/
+temp/
+.cache/
