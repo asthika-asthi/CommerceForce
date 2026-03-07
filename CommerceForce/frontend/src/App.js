@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 function App() {
   const [message, setMessage] = useState("Loading...");
 
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";// || "http://backend:8080/api/health"; const API_URL = "https://api.yourapp.com";
   useEffect(() => {
-    fetch("http://localhost:8000/api/health")
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(() => setMessage("Error connecting to backend"));
@@ -19,3 +20,5 @@ function App() {
 }
 
 export default App;
+
+    // #fetch("http://localhost:8000/api/health")
