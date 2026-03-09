@@ -32,12 +32,14 @@ services:
     build:
       context: ./frontend
       args:
-        REACT_APP_API_URL: http://localhost:8080
+        REACT_APP_API_URL: localhost #https://chairless-chiropodical-larita.ngrok-free.dev
     container_name: react_frontend
     depends_on:
       - backend
     ports:
       - "3000:3000"
+    environment:
+      DANGEROUSLY_DISABLE_HOST_CHECK: "true"
 
 volumes:
   postgres_data:
